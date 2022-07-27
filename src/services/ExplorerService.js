@@ -16,9 +16,6 @@ class ExplorerService {
   delete(id) {
     return http.delete(`/explorers/${id}`);
   }
-  getMissionCommander(){
-    return http.get("/missionCommander")
-  }
 }
 
 export default new ExplorerService();

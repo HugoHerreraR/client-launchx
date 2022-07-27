@@ -19,12 +19,12 @@ const routes = [
   {
     path: "/missionCommander",
     name: "missionCommander-details",
-    component: () => import("./components/CommanderList.vue")
+    component: () => import("./components/CommanderList")
   },
   {
     path: "/addComander",
     name: "add-MissionCommander",
-    component: () => import("./components/addComander.vue")
+    component: () => import("./components/addComander")
   }
 ];
 const router = createRouter({
