@@ -18,13 +18,18 @@ const routes = [
   },
   {
     path: "/missionCommander",
-    name: "missionCommander-details",
+    name: "missionCommander",
     component: () => import("./components/CommanderList")
   },
   {
     path: "/addComander",
     name: "add-MissionCommander",
     component: () => import("./components/addComander")
+  },
+  {
+    path: "/missionCommander/:id",
+    name: "missionCommander-details",
+    component: () => import("./components/missionCommander")
   }
 ];
 const router = createRouter({
