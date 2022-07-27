@@ -1,20 +1,30 @@
 import { createWebHistory, createRouter } from "vue-router";
-const routes =  [
+const routes = [
   {
     path: "/",
     alias: "/explorers",
     name: "explorers",
-    component: () => import("./components/ExplorersList")
+    component: () => import("./components/ExplorersList"),
   },
   {
     path: "/explorer/:id",
     name: "explorer-details",
-    component: () => import("./components/Explorer")
+    component: () => import("./components/Explorer"),
   },
   {
     path: "/add",
     name: "add-explorer",
-    component: () => import("./components/AddExplorer")
+    component: () => import("./components/AddExplorer"),
+  },
+  {
+    path: "/missionCommander",
+    name: "missionCommander-details",
+    component: () => import("./components/CommanderList.vue")
+  },
+  {
+    path: "/addComander",
+    name: "add-MissionCommander",
+    component: () => import("./components/addComander.vue")
   }
 ];
 const router = createRouter({
