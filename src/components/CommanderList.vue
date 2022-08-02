@@ -20,8 +20,8 @@
         <div>
           <br><label><strong>Nombre:</strong></label> {{currentCommander.name}}
           <br><label><strong>Username:</strong></label> {{currentCommander.username}}
-          <br><label v-if="currentCommander.hasAzureCertification == true"><strong>Certificación Azure</strong> Si</label>
-          <br><label v-if="currentCommander.hasAzureCertification == false"><strong>Certificación Azure</strong> No</label>
+          <br v-if="currentCommander.hasAzureCertification === true"><label v-if="currentCommander.hasAzureCertification === true"><strong>Certificación Azure</strong> Si</label>
+          <br v-if="currentCommander.hasAzureCertification === false"><label v-if="currentCommander.hasAzureCertification === false"><strong>Certificación Azure</strong> No</label>
         </div>
         <router-link :to="'/missionCommander/' + currentCommander.id" class="btn btn-info">Editar</router-link>
       </div>
