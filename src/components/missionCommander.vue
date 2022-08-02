@@ -53,7 +53,14 @@ export default {
             });
         },
         deleteCommander(){
-
+            CommanderService.delete(this.missionCommander.id)
+            .then(response => {
+                console.log(response.data);
+                this.$router.push({ name: "missionCommander" });
+            })
+            .catch(e => {
+                console.log(e);
+            })
         },
         UpdateCommander(){
             var val = this.missionCommander.currentEnrollment.toString()
@@ -75,6 +82,7 @@ export default {
             .then(response => {
                 console.log(response.data);
                 this.message = 'Se actualizó correctamnete'
+                 this.$router.push({ name: "missionCommander" });
             })
             .catch(e => {
                 console.log(e);
